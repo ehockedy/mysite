@@ -25,5 +25,8 @@
   },
   "scripts": {
     "start": "webpack serve"
+  },
+  "dependencies": {
+    "style-loader": "^3.3.1"
   }
 }
