@@ -1,7 +1,14 @@
 import * as React from "react";
+import styles from '../css/title.module.css'
+
+function Title() {
+  return <div className={styles.title}>
+    Ed Hockedy.
+  </div>
+}
 
 export const App = () => (
-  <h1>
-    Hi from React! Welcome to my site!
-  </h1>
+  <div className={styles.centralCol}>
+    <Title />
+  </div>
 );
