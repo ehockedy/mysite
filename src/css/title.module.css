@@ -15,6 +15,33 @@
 
 .options {
     font-size: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    /* Remove bullets */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    /* Make it so list items define the width */
+    width: 0px;
+}
+
+.options:hover {
+    color: #0008;
+}
+
+.option {
+    padding-left: 0px;
+    width: fit-content;
+    transition: padding-left 0.5s, color 0.5s
+}
+
+.option:hover {
+    padding-left: 12px;
+    cursor: pointer;
+    color: black;
 }
 
 .centralCol {

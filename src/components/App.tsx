@@ -13,18 +13,18 @@ type OptionProps = {
 }
 
 function Option(props: OptionProps) {
-  return <div>
-    {props.children}
-  </div>
+  return <li className={styles.option}>
+      {props.children}
+  </li>
 }
 
 function Options() {
-  return <div className={styles.options}>
+  return <ul className={styles.options}>
     <Option>About.</Option>
     <Option>Projects.</Option>
     <Option>CV.</Option>
     <Option>Contact.</Option>
-  </div>
+  </ul>
 }
 
 
