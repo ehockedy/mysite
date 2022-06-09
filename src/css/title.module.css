@@ -48,3 +48,9 @@
     width: 50%;
     margin: 50px auto;
 }
+
+/* Remove the default stlying for <a> elements created by react-router */
+.option > a {
+    color: inherit;
+    text-decoration: none;
+}
