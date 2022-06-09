@@ -48,6 +48,6 @@ module.exports = {
         // This generates the index.html with all required script tags using the given template
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "src", "public", "index.html"),
-        }),
+        })
     ],
 };
