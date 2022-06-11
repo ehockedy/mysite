@@ -1,0 +1,15 @@
+.titleContainer {
+    margin-bottom: 64px;
+}
+
+.title {
+    font-size: 100px;
+    line-height: 80%;
+    margin-left: -5px;
+}
+
+.titleTop {
+    font-size: 30px;
+    line-height: 80%;
+}
+

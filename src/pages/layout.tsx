@@ -11,7 +11,9 @@ const Layout = () => {
           </div>
         </div>
       </div>
-      <Outlet />
+      <div className={styles.centralCol}>
+        <Outlet />
+      </div>
     </>
   }
 

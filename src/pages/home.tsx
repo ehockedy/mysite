@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, To } from "react-router-dom";
-import styles from '../css/title.module.css'
+import Options from '../components/options'
+import styles from '../css/home.module.css'
 
 const Title = () => {
     return <div className={styles.titleContainer}>
@@ -9,31 +9,11 @@ const Title = () => {
     </div>
 }
 
-type OptionProps = {
-    route: To,
-    children: React.ReactNode,
-}
-
-const Option = (props: OptionProps) => {
-    return <li className={styles.option}>
-        <Link to={props.route}>{props.children}</Link>
-    </li>
-}
-
-const Options = () => {
-    return <ul className={styles.options}>
-        <Option route="/about">About.</Option>
-        <Option route="/projects">Projects.</Option>
-        <Option route="/">CV.</Option>
-        <Option route="/">Contact.</Option>
-    </ul>
-}
-
 const Home = () => {
-    return <div className={styles.centralCol}>
+    return <>
         <Title />
         <Options />
-    </div>
+    </>
 }
 
 export default Home

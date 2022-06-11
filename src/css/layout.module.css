@@ -23,3 +23,8 @@
 .logo:hover {
     cursor: pointer;
 }
+
+.centralCol {
+    width: 50%;
+    margin: 50px auto;
+}

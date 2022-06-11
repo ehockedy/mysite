@@ -1,18 +1,3 @@
-.titleContainer {
-    margin-bottom: 64px;
-}
-
-.title {
-    font-size: 100px;
-    line-height: 80%;
-    margin-left: -5px;
-}
-
-.titleTop {
-    font-size: 30px;
-    line-height: 80%;
-}
-
 .options {
     font-size: 40px;
     display: flex;
@@ -42,11 +27,6 @@
     padding-left: 12px;
     cursor: pointer;
     color: black;
-}
-
-.centralCol {
-    width: 50%;
-    margin: 50px auto;
 }
 
 /* Remove the default stlying for <a> elements created by react-router */
