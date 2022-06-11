@@ -1,0 +1,25 @@
+.sidebar {
+    height: 100%;
+    width: 80px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 7px 1px rgb(0 0 0 / 35%);
+    transition: width 0.5s;
+}
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
