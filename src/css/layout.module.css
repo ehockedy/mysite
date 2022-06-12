@@ -7,6 +7,9 @@
     left: 0;
     box-shadow: 0 1px 7px 1px rgb(0 0 0 / 35%);
     transition: width 0.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .sidebar:hover {
@@ -27,4 +30,44 @@
 .centralCol {
     width: 50%;
     margin: 50px auto;
+}
+
+
+.optionsSidebar {
+    font-size: 24px;
+    /* Shift left a bit so that icons only view is central */
+    transform: translate(-8px, 0);
+    transition: transform .5s;
+}
+
+.optionSidebarIcon {
+    /* Set to have block properties so that the elements have width */
+    display: inline-block;
+}
+
+/* Initially, the options text has no width as it will get revealed when the sidebar is hovered on */
+.optionSidebarText {
+    width: 0%;
+    overflow: hidden;
+    display: inline-block;
+    padding-left: 8px;
+    transition: width .5s;
+}
+
+.sidebar > .optionsSidebar > .optionSidebar > a {
+    display: flex;
+    align-items: center;
+}
+
+/* Reveal the text part */
+.sidebar:hover > .optionsSidebar > .optionSidebar > a > .optionSidebarText {
+    transition: width .5s;
+    width: 100%;
+}
+
+/* When the sidebar is hovered over, shift the icon and text to the left to make room for the revealing text */
+.sidebar:hover > .optionsSidebar {
+    transition: transform .5s;
+    /* Use a fixed amount, not relative, so that options stay aligned */
+    transform: translate(-45px, 0);
 }

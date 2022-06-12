@@ -1,5 +1,5 @@
 import React from "react";
-import Options from '../components/options'
+import HomepageMenu from '../components/options'
 import styles from '../css/home.module.css'
 
 const Title = () => {
@@ -12,7 +12,7 @@ const Title = () => {
 const Home = () => {
     return <>
         <Title />
-        <Options />
+        <HomepageMenu />
     </>
 }
 
