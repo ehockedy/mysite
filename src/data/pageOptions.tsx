@@ -17,29 +17,29 @@ export type Option = {
 export const HOME: Option = {
     route: '/',
     name: "Home.",
-    icon: <span>H</span>,
+    icon: <div>🏠</div>,
 }
 
 export const ABOUT: Option = {
     route: '/about',
     name: "About.",
-    icon: <span>A</span>,
+    icon: <div>🙋‍♂️</div>,
 }
 
 export const PROJECTS: Option = {
     route: '/projects',
     name: "Projects.",
-    icon: <span>P</span>,
+    icon: <div>💻</div>,
 }
 
 export const CV: Option = {
     route: '/',
     name: "CV.",
-    icon: <span>V</span>,
+    icon: <div>📄</div>,
 }
 
 export const CONTACT: Option = {
     route: '/',
     name: "Contact.",
-    icon: <span>C</span>,
+    icon: <div>📞</div>,
 }

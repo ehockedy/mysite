@@ -36,21 +36,25 @@
 .optionsSidebar {
     font-size: 24px;
     /* Shift left a bit so that icons only view is central */
-    transform: translate(-8px, 0);
+    transform: translate(-20px, 0);
     transition: transform .5s;
 }
 
 .optionSidebarIcon {
     /* Set to have block properties so that the elements have width */
-    display: inline-block;
+    display: inline-flex;
+    /* width: 40px; */
+    /* text-align: center; */
 }
 
 /* Initially, the options text has no width as it will get revealed when the sidebar is hovered on */
 .optionSidebarText {
     width: 0%;
     overflow: hidden;
-    display: inline-block;
-    padding-left: 8px;
+    display: inline-flex;
+    height: 36px;
+    align-items: center;
+    /* padding-left: 8px; */
     transition: width .5s;
 }
 
@@ -69,5 +73,12 @@
 .sidebar:hover > .optionsSidebar {
     transition: transform .5s;
     /* Use a fixed amount, not relative, so that options stay aligned */
-    transform: translate(-45px, 0);
+    transform: translate(-64px, 0);
+}
+
+.optionSidebarIcon > div {
+    display: inline-flex;
+    width: 40px;
+    height: 36px;
+    justify-content: center;
 }
