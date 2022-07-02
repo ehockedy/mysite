@@ -1,0 +1,103 @@
+.cardOuter {
+    width: 360px;
+    height: 520px;
+    margin-bottom: 24px;
+
+    /* Flip card behaviour */
+    perspective: 1000px;
+}
+
+.cardOuter:hover .cardInner {
+    /* Flip card behaviour */
+    /* Todo flip on click 'see more' not hover */
+    transform: rotateY(180deg);
+}
+
+.cardInner {
+    width: 100%;
+    height: 100%;
+
+    /* Flip card behaviour */
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.cardFront, .cardBack {
+    /* Flip card behaviour */
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+}
+
+.content, .background {
+    height: 100%;
+    width: 100%;
+    border: black 2px solid;
+    border-radius: 24px;
+    box-sizing: border-box;
+
+    /* Flip card behaviour */
+    backface-visibility: hidden;
+}
+
+.content {
+    padding: 16px;
+    background-color: white;
+    /* t, r, b, l */
+    margin: -6px 0px 0px 3px;
+}
+
+.background {
+    background-color: rgb(206, 18, 18);
+}
+
+/* Content of front of card */
+.cardMain {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: normal;
+}
+
+.contentLine {
+    margin-bottom: 8px;
+}
+
+.circularImg {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border: 2px solid rgb(0, 0, 0); 
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.technologies {
+    font-weight: normal;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #888;
+    width: 100%;
+}
+
+.description {
+    font-weight: normal;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Content of back of card */
+.cardExtraInfo {
+}
