@@ -38,3 +38,93 @@
 .icon {
     padding-right: 8px;
 }
+
+/* Navbar */
+.navbarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navbarOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    /* General styling */
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: normal;
+
+    /* Remove bullets */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbarOption:not(:last-child) {
+    margin-right: 72px;
+}
+
+.navbarOption:last-child {
+    margin-right: 20px;
+}
+
+.navbarOption > a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbarOption {
+    color: black;
+    transition: color .25s ease;
+}
+/* 
+.navbarOption:hover {
+    border-bottom: 1px solid black;
+} */
+
+/* .navbarOption:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.navbarOption:hover:after {
+    width: 100%;
+    background-color: red;
+} */
+
+/* TODO use defined colour values */
+.red:hover {
+    color: red;
+
+}
+.blue:hover {
+    color: blue;
+}
+.yellow:hover {
+    color: yellow;
+}
+.purple:hover {
+    color: purple
+}
+
+/* .navbarOptionText {
+    color: black;
+}
+
+.navbarOptionText:hover {
+    color: blue;
+} */
+
+.divider {
+    /* Divider at bottom */
+    padding-bottom: 8px;
+    border-bottom: 1px solid #bbb;
+     border-image: linear-gradient(90deg, rgba(60,74,83,.00), rgba(60,74,83,0.90)) 1;
+    width: 50%;
+}

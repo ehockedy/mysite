@@ -3,6 +3,7 @@ import { Outlet, Link, To } from "react-router-dom";
 import optionstyles from '../css/options.module.css'
 import styles from '../css/layout.module.css'
 import * as pageoptions from '../data/pageOptions'
+import type { Colour } from "../data/pageOptions";
 import classnames from "classnames"
 
 type SidebarMenuOptionProps = {
@@ -20,6 +21,27 @@ const SidebarMenuOption = (props: SidebarMenuOptionProps) => {
       <Link to={props.route}>
         <div className={styles.optionSidebarIcon}>{props.icon}</div>
         <div className={styles.optionSidebarText}>{props.children}</div>
+      </Link>
+  </li>
+}
+
+type NavbarOptionProps = {
+  // Page to route to
+  route: To,
+  // Content to render on the option
+  children: React.ReactNode,
+  // Colour when hovered
+  colour: Colour,
+}
+const NavbarOption = (props: NavbarOptionProps) => {
+  return <li className={classnames(optionstyles.navbarOption, {
+    [optionstyles.red]: props.colour === 'red',
+    [optionstyles.blue]: props.colour === 'blue',
+    [optionstyles.yellow]: props.colour === 'yellow',
+    [optionstyles.purple]: props.colour === 'purple'
+  })}>
+      <Link to={props.route}>
+        <div className={optionstyles.navbarOptionText}>{props.children}</div>
       </Link>
   </li>
 }
@@ -48,15 +70,34 @@ const SidebarMenu = () => {
   </ul>
 }
 
+const NavigationBar = () => {
+  return <div className={optionstyles.navbarContainer}>
+      <ul className={optionstyles.navbarOptions}>
+        {pageOptions.map(
+            (option: pageoptions.Option) =>
+              <NavbarOption
+                route={option.route}
+                key={option.name}
+                colour={option.colour}
+              >
+                {option.name}
+              </NavbarOption>
+        )}
+    </ul>
+    <div className={optionstyles.divider}></div>
+  </div>
+}
+
 const Layout = () => {
     return <>
-      <div className={styles.sidebar}>
-        <div className={styles.logoContainer}>
+      <div className={styles.navbar}>
+        {/* <div className={styles.logoContainer}>
           <div className={styles.logo}>
             EH
           </div>
-        </div>
-        <SidebarMenu/>
+        </div> */}
+        {/* <SidebarMenu/> */}
+        <NavigationBar/>
       </div>
       <div className={styles.centralCol}>
         <Outlet />
