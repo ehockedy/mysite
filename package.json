@@ -30,6 +30,7 @@
     "start": "webpack serve"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^4.5.11",
     "style-loader": "^3.3.1"
   }
 }
