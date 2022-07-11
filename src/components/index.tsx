@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createRoot } from 'react-dom/client';
 import { App } from "./App";
-import "@fontsource/montserrat"
+import "@fontsource/gloria-hallelujah"
 import '../css/index.css'
 
 const container = document.getElementById('app')

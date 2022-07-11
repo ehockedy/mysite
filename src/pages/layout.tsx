@@ -90,18 +90,18 @@ const NavigationBar = () => {
 
 const Layout = () => {
     return <>
-      <div className={styles.navbar}>
+      {/* <div className={styles.navbar}> */}
         {/* <div className={styles.logoContainer}>
           <div className={styles.logo}>
             EH
           </div>
         </div> */}
         {/* <SidebarMenu/> */}
-        <NavigationBar/>
-      </div>
-      <div className={styles.centralCol}>
+        {/* <NavigationBar/> */}
+      {/* </div> */}
+      {/* <div className={styles.centralCol}> */}
         <Outlet />
-      </div>
+      {/* </div> */}
     </>
   }
 

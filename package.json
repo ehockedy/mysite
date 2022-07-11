@@ -30,7 +30,7 @@
     "start": "webpack serve"
   },
   "dependencies": {
-    "@fontsource/montserrat": "^4.5.11",
+    "@fontsource/gloria-hallelujah": "^4.5.7",
     "style-loader": "^3.3.1"
   }
 }

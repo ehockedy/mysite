@@ -1,53 +1,55 @@
-.titleContainer {
-    margin-bottom: 64px;
-    margin-left: 20px;
-}
+.central {
+    letter-spacing: 4px;
 
-.titleContainer > :not(:last-child) {
-    margin-bottom: 8px;
-}
+    position: fixed;
+    left: 0;
+    right: 0;
 
-.title {
-    font-size: 100px;
-    line-height: 80%;
-}
-
-.titleTop {
-    font-size: 100px;
-    line-height: 80%;
-}
-
-.titleMid {
-    font-size: 36px;
-    line-height: 80%;
-    margin-left: 60px;
-}
-
-.titleName {
-    font-size: 90px;
-    line-height: 80%;
-    margin-left: 72px;
-}
-
-.subtitle {
-    font-size: 26px;
-    line-height: 80%;
-    margin-left: 100px;
-    color: rgb(144, 144, 144);
-    letter-spacing: normal;
-}
-
-.centralCol {
-    width: 80%;
-    margin: 120px auto;
-}
-
-/* .twoCol {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-}
-
-.colOne {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-} */
+}
+
+.orange {
+    color: #ed801e;
+}
+
+.title3 {
+    font-size: 100px;
+    color: black;
+    line-height: 90%;
+}
+
+.subtitle3 {
+    line-height: 90%;
+    color: #999999;
+    text-align: justify;
+    margin-top: 16px;
+}
+
+/* Used to add content so justify works on single line */
+.subtitle3:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.centralText {
+    top: 33%;
+}
+
+.options {
+    top: 33%;
+    margin-top: 240px;
+}
+
+.options > div {
+    font-size: 30px;
+    line-height: 160%;
+}
+
+.centralContentRow {
+  position: fixed;
+  width: 1000px;
+}
