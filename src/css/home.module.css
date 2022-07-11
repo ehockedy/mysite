@@ -12,24 +12,24 @@
 }
 
 .orange {
-    color: #ed801e;
+    color: var(--primaryHighlight);
 }
 
-.title3 {
+.title {
     font-size: 100px;
-    color: black;
+    color: var(--primaryText);
     line-height: 90%;
 }
 
-.subtitle3 {
+.subtitle {
     line-height: 90%;
-    color: #999999;
+    color: var(--secondaryText);
     text-align: justify;
     margin-top: 16px;
 }
 
 /* Used to add content so justify works on single line */
-.subtitle3:after {
+.subtitle:after {
     content: "";
     display: inline-block;
     width: 100%;
