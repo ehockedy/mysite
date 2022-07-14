@@ -1,0 +1,14 @@
+
+.myImage {
+    filter: drop-shadow(0px 0px 10px #222); 
+    /* transform: scaleX(-1); */
+    width:500px; /* you can use % */
+    height: auto;
+    /* filter:
+        drop-shadow(5px -10px 5px rgb(218, 59, 59))
+        drop-shadow(-10px 10px 5px rgb(54, 89, 192))
+        drop-shadow(-10px -6px 5px rgb(209, 209, 79))
+        drop-shadow(10px -5px 5px rgb(144, 54, 192)); */
+
+
+}

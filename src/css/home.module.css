@@ -21,11 +21,25 @@
     line-height: 90%;
 }
 
+.subtitleButton {
+    /* Remove button styling */
+    all: unset;
+    cursor: pointer;
+}
+
 .subtitle {
-    line-height: 90%;
+    line-height: 30px;
     color: var(--secondaryText);
     text-align: justify;
-    margin-top: 16px;
+    padding-top: 12px;
+    width: 96%;
+    text-shadow: 1px 1px var(--primaryBackground);
+    white-space: pre-wrap;
+}
+
+/* Enable accessibility highlighting when tab focus to the button */
+.subtitle:focus-visible {
+    outline: var(--primaryText) 4px auto;
 }
 
 /* Used to add content so justify works on single line */
@@ -35,8 +49,16 @@
     width: 100%;
 }
 
+.subtitle > * {
+    margin-top: 16px;
+
+}
+
 .centralText {
     top: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .options {
