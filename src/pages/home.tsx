@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import React, { useState } from "react";
+import { Link, To } from "react-router-dom";
 import styles from '../css/home.module.css'
+import * as pageoptions from '../data/pageOptions'
 
 type SubtitleMessage = {
     message: string,
@@ -44,6 +46,21 @@ const getUniqueRandomElement = (array: Array<SubtitleMessage>, currentElement: S
     return nextElement;
 }
 
+type OptionProps = {
+    // Page to route to
+    route: To,
+    // Content to render on the option
+    children: React.ReactNode,
+}
+// Option used in the homepage menu
+const Option = (props: OptionProps) => {
+    return <Link to={props.route}>
+        <button className={classNames(styles.option, styles.clickable)}>
+            {props.children}
+        </button>
+    </Link>
+}
+
 // I'm not sure I want this feature on at the moment, but leaving a switch here in case I change my mind
 const messageGeneratorEnabled = false;
 
@@ -56,7 +73,7 @@ const Home = () => {
             <div className={styles.title}>EdwardHockedy<span className={styles.orange}>.</span>dev</div>
             {messageGeneratorEnabled ?
                 <button
-                    className={classNames(styles.subtitleButton, styles.subtitle)}
+                    className={classNames(styles.clickable, styles.subtitle)}
                     style={{fontSize: `${subtitleMessage.fontSize}px` }}
                     onClick={()=>{setSubtitleMessage(getUniqueRandomElement(subtitleMessages, subtitleMessage))}}
                 >
@@ -71,8 +88,12 @@ const Home = () => {
             }
         </div>
         <div className={classNames(styles.options, styles.centralContentRow)}>
-            <div>Things about me</div>
-            <div>Things I've made</div>
+            <Option route={pageoptions.ABOUT.route}>
+                Things about me
+            </Option>
+            <Option route={pageoptions.PROJECTS.route}>
+                Things I've made
+            </Option>
         </div>
     </div>
 }
