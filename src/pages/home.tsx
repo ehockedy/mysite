@@ -61,6 +61,20 @@ const Option = (props: OptionProps) => {
     </Link>
 }
 
+const Smiley = () => {
+    const [clicked, setClicked] = useState(false)
+    return <button
+        className={classNames(styles.hiddenSmiley, styles.clickable, {
+            [styles.orange]: clicked,
+        })}
+        onClick={() => {
+            setClicked(!clicked)
+        }}
+    >
+        {':)'}
+    </button>
+}
+
 // I'm not sure I want this feature on at the moment, but leaving a switch here in case I change my mind
 const messageGeneratorEnabled = false;
 
@@ -95,6 +109,7 @@ const Home = () => {
                 Things I've made
             </Option>
         </div>
+        <Smiley />
     </div>
 }
 
