@@ -43,3 +43,9 @@
 .isActive {
     color: var(--primaryText);
 }
+
+.orange {
+  color: var(--primaryHighlight);
+  font-size: 48px;
+  line-height: 60%;
+}  

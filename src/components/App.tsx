@@ -1,8 +1,8 @@
 import React, { RefObject, useEffect, useRef, useState } from "react";
 import About from "../pages/about"
 import Home from "../pages/home"
-import { NavbarIcon, NavbarOption, NavigationBar } from "./navigation";
-import optionstyles from '../css/options.module.css'
+import { NavbarIcon, NavbarOption, NavigationBar, HomeIcon } from "./navigation";
+
 
 const useIntersection = (element: RefObject<HTMLDivElement>) => {
   const [isVisible, setState] = useState(false);
@@ -38,14 +38,6 @@ const Section = (props: SectionProps) => {
   </div>
 }
 
-const homeIcon = (
-  <span>
-    EH
-    <span className={optionstyles.orange}>.</span>
-  </span>
-)
-
-
 export const App = () => {
   // TODO put this and useIntersection call in function
   const homeRef = useRef<HTMLDivElement>(null);
@@ -58,7 +50,7 @@ export const App = () => {
 
   return <>
     <NavigationBar>
-      <NavbarIcon isActive={inViewport} element={homeIcon} anchor={'home'}/>
+      <NavbarIcon isActive={inViewport} element={HomeIcon} anchor={'home'}/>
       <NavbarOption isActive={aboutInViewport} element={'About'} anchor={'about'}/>
     </NavigationBar>
 

@@ -72,4 +72,11 @@ const NavigationBar = (props: NavbarProps) => {
     </ul>
 }
 
-export {NavbarIcon, NavbarOption, NavigationBar};
+const HomeIcon = (
+    <span>
+      EH
+      <span className={style.orange}>.</span>
+    </span>
+  )
+
+export {NavbarIcon, NavbarOption, NavigationBar, HomeIcon};
