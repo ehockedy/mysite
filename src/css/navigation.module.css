@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+
+    /* Remove bullets */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    font-size: 30px;
+}
+
+.navbarOption {
+    writing-mode: vertical-lr;
+    color: var(--secondaryText);
+    text-decoration: none;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    transition: color .5s ease;
+}
+
+.navbarOption > button {
+    color: inherit;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+}
+
+.navbarOptionText,
+.navbarIcon {
+    /* Remove button styling */
+    all: unset;
+    cursor: pointer;
+}
+
+.navbarOptionText > span {
+    writing-mode: vertical-lr;
+    transform: rotateZ(180deg);
+}
+
+.isActive {
+    color: var(--primaryText);
+}
