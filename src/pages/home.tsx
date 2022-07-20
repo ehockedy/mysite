@@ -1,8 +1,7 @@
 import classNames from "classnames";
 import React, { useState } from "react";
-import { Link, To } from "react-router-dom";
+import { To } from "react-router-dom";
 import styles from '../css/home.module.css'
-import * as pageoptions from '../data/pageOptions'
 
 type SubtitleMessage = {
     message: string,
@@ -46,21 +45,6 @@ const getUniqueRandomElement = (array: Array<SubtitleMessage>, currentElement: S
     return nextElement;
 }
 
-type OptionProps = {
-    // Page to route to
-    route: To,
-    // Content to render on the option
-    children: React.ReactNode,
-}
-// Option used in the homepage menu
-const Option = (props: OptionProps) => {
-    // return <Link to={props.route}>
-    return    <button className={classNames(styles.option, styles.clickable)}>
-            {props.children}
-        </button>
-    // </Link>
-}
-
 const Smiley = () => {
     const [clicked, setClicked] = useState(false)
     return <button
@@ -102,14 +86,6 @@ const Home = () => {
                 </div>
             }
         </div>
-        {/* <div className={classNames(styles.options, styles.centralContentRow)}>
-            <Option route={pageoptions.ABOUT.route}>
-                Things about me
-            </Option>
-            <Option route={pageoptions.PROJECTS.route}>
-                Things I've made
-            </Option>
-        </div> */}
     </div>
 }
 
