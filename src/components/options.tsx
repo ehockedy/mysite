@@ -23,8 +23,8 @@ const Option = (props: OptionProps) => {
 const pageOptions: Array<pageoptions.Option> = [
     pageoptions.ABOUT,
     pageoptions.PROJECTS,
-    pageoptions.CV,
-    pageoptions.CONTACT,
+    // pageoptions.CV,
+    // pageoptions.CONTACT,
 ]
 
 // Homepage menu options

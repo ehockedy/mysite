@@ -1,14 +1,16 @@
 .central {
     letter-spacing: 4px;
 
-    position: fixed;
+    /* position: fixed;
     left: 0;
-    right: 0;
+    right: 0; */
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    height: inherit;
 }
 
 .title {
@@ -85,12 +87,11 @@
 }
 
 .centralContentRow {
-  position: fixed;
   width: 1000px;
 }
 
 .hiddenSmiley {
-    position: fixed;
+    /* position: fixed; */
     top: 33%;
     transform: translate(-530px, -60px) rotateZ(45deg);
     font-size: 60px;

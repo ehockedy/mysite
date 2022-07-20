@@ -54,11 +54,11 @@ type OptionProps = {
 }
 // Option used in the homepage menu
 const Option = (props: OptionProps) => {
-    return <Link to={props.route}>
-        <button className={classNames(styles.option, styles.clickable)}>
+    // return <Link to={props.route}>
+    return    <button className={classNames(styles.option, styles.clickable)}>
             {props.children}
         </button>
-    </Link>
+    // </Link>
 }
 
 const Smiley = () => {
@@ -77,12 +77,13 @@ const Smiley = () => {
 
 // I'm not sure I want this feature on at the moment, but leaving a switch here in case I change my mind
 const messageGeneratorEnabled = false;
-
+// TODO take anchor id as prop
 const Home = () => {
     const [subtitleMessage, setSubtitleMessage] = useState(messageGeneratorEnabled ? getRandomElement(starterSubtitleMessages) : initialMessage);
 
     // Use setState hook thing to store current message
-    return <div className={styles.central}>
+    return <div className={styles.central} id={'home'}>
+        <Smiley />
         <div className={classNames(styles.centralText, styles.centralContentRow)}>
             <div className={styles.title}>EdwardHockedy<span className={styles.orange}>.</span>dev</div>
             {messageGeneratorEnabled ?
@@ -101,15 +102,14 @@ const Home = () => {
                 </div>
             }
         </div>
-        <div className={classNames(styles.options, styles.centralContentRow)}>
+        {/* <div className={classNames(styles.options, styles.centralContentRow)}>
             <Option route={pageoptions.ABOUT.route}>
                 Things about me
             </Option>
             <Option route={pageoptions.PROJECTS.route}>
                 Things I've made
             </Option>
-        </div>
-        <Smiley />
+        </div> */}
     </div>
 }
 

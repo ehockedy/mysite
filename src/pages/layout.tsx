@@ -34,25 +34,46 @@ type NavbarOptionProps = {
   colour: Colour,
 }
 const NavbarOption = (props: NavbarOptionProps) => {
-  return <li className={classnames(optionstyles.navbarOption, {
-    [optionstyles.red]: props.colour === 'red',
-    [optionstyles.blue]: props.colour === 'blue',
-    [optionstyles.yellow]: props.colour === 'yellow',
-    [optionstyles.purple]: props.colour === 'purple'
-  })}>
+  return <li className={classnames(optionstyles.navbarOption)}>
       <Link to={props.route}>
         <div className={optionstyles.navbarOptionText}>{props.children}</div>
       </Link>
   </li>
 }
 
+type NavbarOptionProps2 = {
+  // Section to link to
+  anchor: string
+  // Content to render on the option
+  element: React.ReactNode,
+  // Whether user is on this section
+  isActive: boolean,
+}
+export const NavbarOption2 = (props: NavbarOptionProps2) => {
+  return <li className={classnames(optionstyles.navbarOption2, {
+    [optionstyles.isActive]: props.isActive
+  })}>
+    <button
+      onClick={(e) => {
+        const anchorTargetElement = document.querySelector(`#${props.anchor}`)
+        anchorTargetElement && anchorTargetElement.scrollIntoView({
+          behavior: 'smooth', // smooth scroll
+          block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+        })
+
+        // Set anchor in url without directly moving
+        history.pushState({}, "", `#${props.anchor}`)
+      }}
+      className={optionstyles.navbarOptionText}>
+        <span>{props.element}</span>
+    </button>
+  </li>
+}
+
 // Define the options that will be appearing in the home page menu
 const pageOptions: Array<pageoptions.Option> = [
-  pageoptions.HOME,
   pageoptions.ABOUT,
   pageoptions.PROJECTS,
-  pageoptions.CV,
-  pageoptions.CONTACT,
 ]
 
 const SidebarMenu = () => {
@@ -88,16 +109,34 @@ const NavigationBar = () => {
   </div>
 }
 
+type NavbarProps = {
+  pageOptions: Array<pageoptions.Option>;
+}
+export const NavigationBar2 = (props: NavbarProps) => {
+  return <ul className={optionstyles.navbarOptions2}>
+        <div>EH<span className={optionstyles.orange}>.</span></div>
+        {props.pageOptions.map(
+            (option: pageoptions.Option) =>
+              <NavbarOption2
+                anchor={option.anchorId}
+                key={option.name}
+              >
+                {option.name}
+              </NavbarOption2>
+        )}
+    </ul>
+}
+
 const Layout = () => {
     return <>
-      {/* <div className={styles.navbar}> */}
+      {/* <div className={styles.navbar}></div> */}
         {/* <div className={styles.logoContainer}>
           <div className={styles.logo}>
             EH
           </div>
         </div> */}
         {/* <SidebarMenu/> */}
-        {/* <NavigationBar/> */}
+        <NavigationBar2/>
       {/* </div> */}
       {/* <div className={styles.centralCol}> */}
         <Outlet />
