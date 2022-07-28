@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React, { useState } from "react";
 import { To } from "react-router-dom";
+import { PageProps } from "../components/page";
 import styles from '../css/home.module.css'
 
 type SubtitleMessage = {
@@ -61,12 +62,12 @@ const Smiley = () => {
 
 // I'm not sure I want this feature on at the moment, but leaving a switch here in case I change my mind
 const messageGeneratorEnabled = false;
-// TODO take anchor id as prop
-const Home = () => {
+
+const Home = (props: PageProps) => {
     const [subtitleMessage, setSubtitleMessage] = useState(messageGeneratorEnabled ? getRandomElement(starterSubtitleMessages) : initialMessage);
 
     // Use setState hook thing to store current message
-    return <div className={styles.central} id={'home'}>
+    return <div className={styles.central} id={props.anchor}>
         <Smiley />
         <div className={classNames(styles.centralText, styles.centralContentRow)}>
             <div className={styles.title}>EdwardHockedy<span className={styles.orange}>.</span>dev</div>

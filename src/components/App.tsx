@@ -25,13 +25,16 @@ const useIntersection = (element: RefObject<HTMLDivElement>) => {
 type SectionProps = {
   children: React.ReactNode;
   intersectionRef: RefObject<HTMLDivElement>;
-
 }
 const Section = (props: SectionProps) => {
   return <div
     ref={props.intersectionRef}
     style={{
-      height: '100vh'
+      height: '100vh',
+      width: '80%',
+      margin: '0 auto',
+      marginBottom: '64px',
+      minHeight: '600px',
     }}
   >
     {props.children}
@@ -39,6 +42,19 @@ const Section = (props: SectionProps) => {
 }
 
 export const App = () => {
+
+  // Once loaded, go to section present in hash if there. This lets a user directly
+  // navigate to a section via url.
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash) {
+      const anchorTargetElement = document.querySelector(hash);
+      if (anchorTargetElement) {
+        anchorTargetElement.scrollIntoView();
+      }
+    }
+  }, [])
+
   // TODO put this and useIntersection call in function
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -55,10 +71,10 @@ export const App = () => {
     </NavigationBar>
 
     <Section intersectionRef={homeRef}>
-      <Home />
+      <Home anchor='home'/>
     </Section>
     <Section intersectionRef={aboutRef}>
-      <About />
+      <About anchor='about'/>
     </Section>
   </>
 };
