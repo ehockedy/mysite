@@ -29,4 +29,20 @@ const ProjectCard = () => {
     </div>
 }
 
-export default ProjectCard
+const ProjectCard2 = () => {
+    return <div className={styles.cardOuter}>
+        <div className={styles.cardInner}>
+            <div className={classnames(styles.background, styles.cardFront)}
+                style={{
+                    backgroundImage: `url(${testImg})`
+                }}
+            >
+                <div className={styles.nameBanner}></div>
+            </div>
+            <div className={classnames(styles.background, styles.cardBack)}>
+            </div>
+        </div>
+    </div>
+}
+
+export default ProjectCard2;

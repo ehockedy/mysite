@@ -1,6 +1,7 @@
 import React, { RefObject, useEffect, useRef, useState } from "react";
 import About from "../pages/about"
 import Home from "../pages/home"
+import Projects from "../pages/projects"
 import { NavbarIcon, NavbarOption, NavigationBar, HomeIcon } from "./navigation";
 
 
@@ -58,9 +59,11 @@ export const App = () => {
   // TODO put this and useIntersection call in function
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
 
   const inViewport = useIntersection(homeRef);
   const aboutInViewport = useIntersection(aboutRef);
+  const projectsInViewport = useIntersection(projectsRef);
 
   // TODO make it so that always one is active
 
@@ -68,6 +71,7 @@ export const App = () => {
     <NavigationBar>
       <NavbarIcon isActive={inViewport} element={HomeIcon} anchor={'home'}/>
       <NavbarOption isActive={aboutInViewport} element={'About'} anchor={'about'}/>
+      <NavbarOption isActive={projectsInViewport} element={'Projects'} anchor={'projects'}/>
     </NavigationBar>
 
     <Section intersectionRef={homeRef}>
@@ -75,6 +79,9 @@ export const App = () => {
     </Section>
     <Section intersectionRef={aboutRef}>
       <About anchor='about'/>
+    </Section>
+    <Section intersectionRef={projectsRef}>
+      <Projects anchor='projects'/>
     </Section>
   </>
 };
