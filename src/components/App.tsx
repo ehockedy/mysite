@@ -12,6 +12,8 @@ const useIntersection = (element: RefObject<HTMLDivElement>) => {
       const observer = new IntersectionObserver(
           ([entry]) => {
               setState(entry.isIntersecting);
+              // TODO need to fix this - since .5 threshold means half or more of the page needs to
+              // be visible, if browser shortened won't register as in view.
           }, {threshold: 0.5}
       );
 
@@ -31,11 +33,10 @@ const Section = (props: SectionProps) => {
   return <div
     ref={props.intersectionRef}
     style={{
-      height: '100vh',
+      minHeight: '100vh',
       width: '80%',
       margin: '0 auto',
       marginBottom: '64px',
-      minHeight: '600px',
     }}
   >
     {props.children}
