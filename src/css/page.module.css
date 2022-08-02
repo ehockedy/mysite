@@ -1,0 +1,8 @@
+.title {
+    font-size: 64px;
+    line-height: 80%;
+}
+
+.orange {
+    color: var(--primaryHighlight);
+}

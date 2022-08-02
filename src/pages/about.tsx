@@ -1,7 +1,7 @@
 import * as React from "react";
 import me from "../assets/ed.png"
 import styles from '../css/about.module.css'
-import { PageProps } from "../components/page";
+import { PageProps, PageTitle } from "../components/page";
 import classNames from "classnames";
 
 // So that I don't have to update the age in the description, calculate my age
@@ -27,7 +27,7 @@ const About = (props: PageProps) => {
     return <div id={props.anchor} className={styles.about}>
         <div className={styles.mainContent}>
             <div className={styles.col}>
-                <h1 className={styles.title}>About me<span className={styles.orange}>.</span></h1>
+                <PageTitle value="About me"></PageTitle>
                 <div className={styles.textContainer}>
                     <p>Hello! Welcome to my site, my name is Ed.</p>
                     <p>

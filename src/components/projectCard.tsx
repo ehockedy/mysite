@@ -1,5 +1,6 @@
 import React from "react";
 import testImg from "../assets/test.jpg"
+import dokvCardImg from "../assets/dokv_card.png"
 import styles from "../css/projectCard.module.css"
 import classnames from "classnames"
 
@@ -34,10 +35,17 @@ const ProjectCard2 = () => {
         <div className={styles.cardInner}>
             <div className={classnames(styles.background, styles.cardFront)}
                 style={{
-                    backgroundImage: `url(${testImg})`
+                    backgroundImage: `url(${dokvCardImg})`
                 }}
             >
-                <div className={styles.nameBanner}></div>
+                <div className={styles.nameBanner}>
+                    <div className={styles.projectName}>
+                        Defence of Karragarra Valley
+                    </div>
+                    <div className={styles.projectDescriptionShort}>
+                        Multiplayer tower defence game
+                    </div>
+                </div>
             </div>
             <div className={classnames(styles.background, styles.cardBack)}>
             </div>

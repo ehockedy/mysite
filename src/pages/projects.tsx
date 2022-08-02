@@ -1,13 +1,12 @@
 import * as React from "react";
-import { PageProps } from "../components/page";
+import { PageProps, PageTitle } from "../components/page";
 import ProjectCard from "../components/projectCard"
 import styles from "../css/projects.module.css"
 
 const Projects = (props: PageProps) => {
   return <div id={props.anchor}>
-      <h1>Projects.</h1>
+      <PageTitle value="Projects"></PageTitle>
       <div className={styles.projectCardContainer}>
-        <ProjectCard/>
         <ProjectCard/>
         <ProjectCard/>
         <ProjectCard/>
