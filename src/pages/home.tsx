@@ -68,8 +68,8 @@ const Home = (props: PageProps) => {
 
     // Use setState hook thing to store current message
     return <div className={styles.central} id={props.anchor}>
-        <Smiley />
         <div className={classNames(styles.centralText, styles.centralContentRow)}>
+            <Smiley />
             <div className={styles.title}>EdwardHockedy<span className={styles.orange}>.</span>dev</div>
             {messageGeneratorEnabled ?
                 <button

@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     transition: color .5s ease;
+    padding-right: 8px;
 }
 
 .navbarOption > button {

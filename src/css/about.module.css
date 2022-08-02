@@ -8,7 +8,6 @@
 
 .imageCol {
     display: flex;
-    /* align-items: center; */
 }
 
 .myImage {
@@ -37,6 +36,4 @@
     padding: 24px;
     border-bottom: rgba(0, 0, 0, 0.6) solid 2px;
     box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.6);
-    margin-top: 60px;
-
 }

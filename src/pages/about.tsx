@@ -25,9 +25,9 @@ const marriageStatus = () => {
 
 const About = (props: PageProps) => {
     return <div id={props.anchor} className={styles.about}>
+        <PageTitle value="About me"></PageTitle>
         <div className={styles.mainContent}>
             <div className={styles.col}>
-                <PageTitle value="About me"></PageTitle>
                 <div className={styles.textContainer}>
                     <p>Hello! Welcome to my site, my name is Ed.</p>
                     <p>

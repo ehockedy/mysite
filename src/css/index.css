@@ -5,8 +5,8 @@ body {
 
 :root {
     --primaryText: #000000;
-    --secondaryText: #999999;
-    --tertiaryText: #dbdbdb;
+    --secondaryText: #969696;
+    --tertiaryText: #dfdfdf;
     --primaryHighlight: #ed801e;
-    --primaryBackground: #f8f8f8
+    --primaryBackground: #f8f8f8;
   }
