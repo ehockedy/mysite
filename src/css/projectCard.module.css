@@ -41,6 +41,8 @@
 
 .cardBack {
     transform: rotateY(180deg);
+    padding: 16px;
+    box-sizing: border-box;
 }
 
 .nameBanner {
@@ -78,4 +80,25 @@
 
     /* Flip card behaviour */
     backface-visibility: hidden;
+}
+
+/* Card back */
+.dates {
+    text-align: end;
+    color: var(--secondaryText);
+}
+
+.info {
+    font-size: 13px;
+    line-height: 130%;
+}
+
+.link {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
 }
